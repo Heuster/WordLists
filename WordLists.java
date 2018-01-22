@@ -7,12 +7,37 @@
  */
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.Integer;
 public class WordLists
 {
-    private ArrayList mylist;
+    ArrayList<String> myList;
     
-    public int numWordsOfLength(int len){
-        //
+    public WordLists(){
+        myList = new ArrayList<String>();
+        myList.add("car");
+        myList.add("frog");
+        myList.add("hike");
+        myList.add("shoe");
+        myList.add("dog");
+        System.out.println(myList.size());
     }
     
+    
+    public int numWordsOfLength(int len){
+        int count = 0;
+        for (String i : myList){
+            if (i.length() == len){
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    public void removeWordsOfLength(int len){
+        for (String i : myList){
+            if (i.length() == len){
+                myList.remove(i);
+            }
+        }
+    }
 }
