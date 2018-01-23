@@ -19,7 +19,7 @@ public class WordLists
         myList.add("hike");
         myList.add("shoe");
         myList.add("dog");
-        System.out.println(myList.size());
+        //System.out.println(myList.size());
     }
     
     
@@ -34,10 +34,12 @@ public class WordLists
     }
     
     public void removeWordsOfLength(int len){
-        for (String i : myList){
-            if (i.length() == len){
+        for (int i = myList.size()-1; i >= 0; i--){
+            if (myList.get(i).length() == len){
                 myList.remove(i);
             }
         }
-    }
-}
+            }
+        }
+    
+
